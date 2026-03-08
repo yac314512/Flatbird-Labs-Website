@@ -1,0 +1,9 @@
+﻿{
+  "name": "flatbird-labs-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Flatbird Labs website with offerings, use cases, and lead capture",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
