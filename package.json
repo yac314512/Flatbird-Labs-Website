@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "description": "Flatbird Labs website with offerings, use cases, and lead capture",
+  "dependencies": {
+    "nodemailer": "^6.9.16"
+  },
   "scripts": {
     "start": "node server.js"
   }

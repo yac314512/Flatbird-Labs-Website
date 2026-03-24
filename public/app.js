@@ -1,9 +1,6 @@
-﻿const form = document.getElementById("lead-form");
+const form = document.getElementById("lead-form");
 const statusNode = document.getElementById("form-status");
 const yearNode = document.getElementById("year");
-
-const DEBUG_STORAGE_KEY = "flatbird_debug_outline";
-let debugToggleButton = null;
 
 if (yearNode) {
   yearNode.textContent = new Date().getFullYear();
@@ -21,48 +18,6 @@ function setStatus(message, type) {
   }
 }
 
-function setDebugMode(enabled) {
-  document.body.classList.toggle("debug-outline", enabled);
-  localStorage.setItem(DEBUG_STORAGE_KEY, enabled ? "1" : "0");
-
-  if (!debugToggleButton) {
-    return;
-  }
-
-  debugToggleButton.dataset.enabled = enabled ? "true" : "false";
-  debugToggleButton.textContent = enabled ? "Debug: On" : "Debug: Off";
-  debugToggleButton.setAttribute("aria-pressed", enabled ? "true" : "false");
-}
-
-function buildDebugToggle() {
-  const button = document.createElement("button");
-  button.type = "button";
-  button.className = "debug-toggle";
-  button.setAttribute("aria-label", "Toggle layout debug outlines");
-  button.title = "Toggle layout debug outlines";
-
-  button.addEventListener("click", () => {
-    const isEnabled = document.body.classList.contains("debug-outline");
-    setDebugMode(!isEnabled);
-  });
-
-  document.addEventListener("keydown", (event) => {
-    if (event.ctrlKey && event.shiftKey && event.key.toLowerCase() === "d") {
-      event.preventDefault();
-      const isEnabled = document.body.classList.contains("debug-outline");
-      setDebugMode(!isEnabled);
-    }
-  });
-
-  document.body.appendChild(button);
-  debugToggleButton = button;
-
-  const saved = localStorage.getItem(DEBUG_STORAGE_KEY) === "1";
-  setDebugMode(saved);
-}
-
-buildDebugToggle();
-
 if (form) {
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -72,7 +27,6 @@ if (form) {
       name: (formData.get("name") || "").toString(),
       email: (formData.get("email") || "").toString(),
       company: (formData.get("company") || "").toString(),
-      phone: (formData.get("phone") || "").toString(),
       interest: (formData.get("interest") || "").toString(),
       message: (formData.get("message") || "").toString(),
     };
