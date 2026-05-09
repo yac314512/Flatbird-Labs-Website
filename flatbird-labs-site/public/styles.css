@@ -238,8 +238,9 @@ p {
 /* ---------- Hero / Judgment Layer ---------- */
 .hero {
   position: relative;
-  padding: 5.5rem 0 4.5rem;
+  padding: 3rem 0 4rem;
   overflow: clip;
+  background: var(--cream-soft);
 }
 
 .hero-bg {
@@ -258,14 +259,14 @@ p {
 }
 
 .hero-eyebrow {
-  margin-bottom: 1.6rem;
+  margin-bottom: 0.9rem;
   font-size: 0.78rem;
 }
 
 .hero h1 {
   max-width: 18ch;
   font-size: clamp(2.5rem, 5.2vw, 4.4rem);
-  margin-bottom: 1.4rem;
+  margin-bottom: 0.9rem;
 }
 
 .hero h1 .accent {
@@ -276,8 +277,8 @@ p {
 }
 
 .hero-lede {
-  max-width: 60ch;
-  margin: 0 0 2rem;
+  max-width: 84ch;
+  margin: 0 0 1.4rem;
   color: var(--ink-soft);
   font-size: clamp(1.05rem, 1.5vw, 1.22rem);
   line-height: 1.6;
@@ -293,7 +294,7 @@ p {
   flex-wrap: wrap;
   align-items: center;
   gap: 0.9rem;
-  margin-bottom: 2.6rem;
+  margin-bottom: 1.6rem;
 }
 
 .hero-credentials {
@@ -301,7 +302,7 @@ p {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 0;
   border-top: 1px solid var(--rule-strong);
-  padding-top: 1.6rem;
+  padding-top: 1.2rem;
   max-width: 980px;
 }
 
@@ -345,7 +346,7 @@ p {
 
 .section-head h2 { margin-bottom: 0.85rem; }
 
-.section-head p {
+.section-head p:not(.eyebrow) {
   font-size: 1.12rem;
   color: var(--ink-soft);
 }
@@ -370,15 +371,15 @@ p {
   background:
     radial-gradient(ellipse at 95% 0%, rgba(233, 105, 46, 0.10), transparent 38%),
     radial-gradient(ellipse at 0% 100%, rgba(29, 78, 216, 0.08), transparent 42%),
-    var(--cream-soft);
+    var(--cream);
 }
 
 .opteros-teaser-head {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  align-items: end;
   margin-bottom: 2.4rem;
+}
+
+.opteros-teaser-intro {
+  margin-bottom: 1.6rem;
 }
 
 .opteros-mark {
@@ -407,10 +408,14 @@ p {
 }
 
 .opteros-body {
-  max-width: 60ch;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
   font-size: 1.08rem;
   line-height: 1.7;
 }
+
+.opteros-body p { margin: 0; }
 
 .opteros-body strong { color: var(--ink); font-weight: 600; }
 
@@ -563,9 +568,10 @@ p {
 /* ---------- Team ---------- */
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.4rem;
   margin-top: 1rem;
+  max-width: 780px;
 }
 
 .team-card {
@@ -611,14 +617,23 @@ p {
 }
 
 .team-closing {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
   margin-top: 2.4rem;
-  padding: 1.6rem 1.8rem;
+  padding: 1.8rem 2rem;
   border-radius: 1.1rem;
-  background: var(--paper);
-  border: 1px solid var(--rule);
+  background: linear-gradient(135deg, var(--brand-deep), var(--brand-deep-2));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.team-closing p {
+  margin: 0;
   font-size: 1.08rem;
-  color: var(--ink);
+  color: rgba(247, 240, 226, 0.92);
   font-weight: 500;
+  line-height: 1.5;
 }
 
 /* ---------- Connect / Form ---------- */
@@ -704,26 +719,50 @@ p {
   padding: 2.4rem 0;
 }
 .footer-layout {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
+  display: flex;
   align-items: center;
   gap: 1.4rem;
 }
-.footer-mark {
-  height: 26px;
-  width: auto;
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+.footer-bird {
   display: block;
+  width: 22px;
+  height: 22px;
+  background-color: var(--accent);
+  -webkit-mask-image: url('/assets/bird-mark.png');
+  mask-image: url('/assets/bird-mark.png');
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+.footer-wordmark-text {
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  font-size: 0.93rem;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
 }
 .footer-tag {
   margin: 0;
+  flex: 1;
   color: rgba(247, 240, 226, 0.74);
   font-size: 0.93rem;
 }
 .footer-meta {
   margin: 0;
-  text-align: right;
+  flex-shrink: 0;
   color: rgba(247, 240, 226, 0.66);
-  font-size: 0.86rem;
+  font-size: 0.93rem;
+  white-space: nowrap;
 }
 
 /* ============================================================
@@ -731,7 +770,7 @@ p {
    ============================================================ */
 
 .opteros-hero {
-  padding: 5rem 0 3.6rem;
+  padding: 2.5rem 0 3.6rem;
   background:
     radial-gradient(ellipse at 100% 0%, rgba(233, 105, 46, 0.14), transparent 38%),
     radial-gradient(ellipse at 0% 100%, rgba(29, 78, 216, 0.08), transparent 42%),
@@ -746,7 +785,7 @@ p {
   line-height: 1;
   letter-spacing: -0.03em;
   color: var(--ink);
-  margin: 0 0 0.4rem;
+  margin: 0 0 0.75rem;
 }
 .opteros-hero-mark .dot { color: var(--accent); }
 
@@ -880,7 +919,6 @@ p {
   font-size: 1.05rem;
   line-height: 1.65;
   color: var(--ink-soft);
-  max-width: 80ch;
 }
 
 .capability-trio {
@@ -963,9 +1001,9 @@ p {
    ============================================================ */
 
 @media (max-width: 1080px) {
-  .opteros-teaser-head {
+  .opteros-body {
     grid-template-columns: 1fr;
-    gap: 1.4rem;
+    gap: 1rem;
   }
   .capability-strip,
   .capability-trio,
@@ -1000,11 +1038,11 @@ p {
   .team-grid { gap: 1.2rem; }
 
   .footer-layout {
-    grid-template-columns: 1fr;
-    text-align: left;
-    gap: 0.9rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
   }
-  .footer-meta { text-align: left; }
+  .footer-tag { text-align: left; }
 }
 
 @media (max-width: 620px) {
