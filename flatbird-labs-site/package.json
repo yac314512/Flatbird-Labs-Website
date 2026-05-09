@@ -1,10 +1,10 @@
-﻿{
+{
   "name": "flatbird-labs-site",
   "version": "1.0.0",
   "private": true,
   "description": "Flatbird Labs website with offerings, use cases, and lead capture",
   "dependencies": {
-    "nodemailer": "^6.9.16"
+    "nodemailer": "^8.0.7"
   },
   "scripts": {
     "start": "node server.js"
