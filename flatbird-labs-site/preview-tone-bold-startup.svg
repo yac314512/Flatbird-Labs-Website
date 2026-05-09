@@ -1,0 +1,49 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1800" viewBox="0 0 1400 1800" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1400" y2="1800" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#06131B"/>
+      <stop offset="1" stop-color="#091E2B"/>
+    </linearGradient>
+    <linearGradient id="cta" x1="120" y1="430" x2="430" y2="490" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00D1B2"/>
+      <stop offset="1" stop-color="#2C9FFF"/>
+    </linearGradient>
+  </defs>
+  <rect width="1400" height="1800" fill="url(#bg)"/>
+  <rect width="1400" height="78" fill="#071019"/>
+  <text x="90" y="50" fill="#ECFFFC" font-size="31" font-family="Arial Black, Arial">FLATBIRD LABS</text>
+  <text x="1040" y="50" fill="#A9C7D6" font-size="18" font-family="Arial">Offerings  System  Contact</text>
+
+  <text x="90" y="145" fill="#5DE2D1" font-size="16" letter-spacing="2" font-family="Arial" font-weight="700">BOLD-STARTUP VOICE</text>
+  <text x="90" y="220" fill="#F2FDFF" font-size="56" font-family="Arial Black, Arial">Stop waiting weeks to launch.</text>
+  <text x="90" y="282" fill="#F2FDFF" font-size="56" font-family="Arial Black, Arial">Go live in 48 hours.</text>
+  <text x="90" y="334" fill="#A8C5D1" font-size="23" font-family="Arial">Flatbird turns one strategy conversation into a full campaign machine across media, creative,</text>
+  <text x="90" y="368" fill="#A8C5D1" font-size="23" font-family="Arial">execution, and live optimization so your team scales without agency drag.</text>
+
+  <rect x="90" y="414" rx="30" width="300" height="64" fill="url(#cta)"/>
+  <text x="132" y="454" fill="#02131A" font-size="24" font-family="Arial" font-weight="700">See It In Action</text>
+
+  <rect x="90" y="528" rx="16" width="1220" height="190" fill="#0A1E2A" stroke="#2A4E63"/>
+  <text x="120" y="576" fill="#5DE2D1" font-size="15" font-family="Arial" font-weight="700">WHY TEAMS SWITCH</text>
+  <text x="120" y="622" fill="#ECFFFF" font-size="30" font-family="Arial Black, Arial">Faster launches. Smarter spend. Clearer wins.</text>
+  <text x="120" y="660" fill="#A8C5D1" font-size="22" font-family="Arial">• Replace handoff chaos with one autonomous workflow</text>
+  <text x="120" y="690" fill="#A8C5D1" font-size="22" font-family="Arial">• Reallocate budget in-flight toward what is working now</text>
+
+  <text x="90" y="780" fill="#5DE2D1" font-size="16" letter-spacing="2" font-family="Arial" font-weight="700">SYSTEM OVERVIEW</text>
+  <rect x="90" y="810" rx="14" width="390" height="152" fill="#0A1E2A" stroke="#2A4E63"/>
+  <text x="112" y="850" fill="#ECFFFF" font-size="25" font-family="Arial Black, Arial">Brief</text>
+  <text x="112" y="884" fill="#A8C5D1" font-size="18" font-family="Arial">One intake. Full strategic context.</text>
+  <rect x="505" y="810" rx="14" width="390" height="152" fill="#0A1E2A" stroke="#2A4E63"/>
+  <text x="527" y="850" fill="#ECFFFF" font-size="25" font-family="Arial Black, Arial">Build</text>
+  <text x="527" y="884" fill="#A8C5D1" font-size="18" font-family="Arial">Media + creative built in parallel.</text>
+  <rect x="920" y="810" rx="14" width="390" height="152" fill="#0A1E2A" stroke="#2A4E63"/>
+  <text x="942" y="850" fill="#ECFFFF" font-size="25" font-family="Arial Black, Arial">Scale</text>
+  <text x="942" y="884" fill="#A8C5D1" font-size="18" font-family="Arial">Launch + optimize automatically.</text>
+
+  <rect x="90" y="1028" rx="16" width="1220" height="250" fill="#08151F" stroke="#2A4E63"/>
+  <text x="120" y="1078" fill="#5DE2D1" font-size="15" font-family="Arial" font-weight="700">CONTACT CTA</text>
+  <text x="120" y="1130" fill="#F2FDFF" font-size="42" font-family="Arial Black, Arial">Ready to move from slow to autonomous?</text>
+  <text x="120" y="1172" fill="#A8C5D1" font-size="22" font-family="Arial">Tell us your target metric and timeline. We will show you the fastest path to impact.</text>
+
+  <rect x="90" y="1738" width="1400" height="62" fill="#050D13"/>
+</svg>

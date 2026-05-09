@@ -1,0 +1,76 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2160" viewBox="0 0 1600 2160" fill="none">
+  <defs>
+    <linearGradient id="bg1" x1="0" y1="0" x2="1600" y2="2160" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#06131B"/>
+      <stop offset="1" stop-color="#071922"/>
+    </linearGradient>
+    <linearGradient id="cta" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#00D1B2"/>
+      <stop offset="1" stop-color="#00A6FF"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="2160" fill="url(#bg1)"/>
+  <rect width="1600" height="84" fill="#071019"/>
+  <rect y="83" width="1600" height="1" fill="#1E3A4A"/>
+
+  <text x="110" y="54" fill="#ECFFFC" font-size="34" font-family="Arial Black, Arial, sans-serif">FLATBIRD LABS</text>
+  <text x="1020" y="54" fill="#B8D5E3" font-size="20" font-family="Arial, sans-serif">Offerings</text>
+  <text x="1150" y="54" fill="#B8D5E3" font-size="20" font-family="Arial, sans-serif">Use Cases</text>
+  <text x="1270" y="54" fill="#B8D5E3" font-size="20" font-family="Arial, sans-serif">Contact</text>
+
+  <text x="110" y="156" fill="#53E4CB" font-size="17" letter-spacing="2.4" font-family="Arial, sans-serif" font-weight="700">MARKETING TRANSFORMATION FIRM</text>
+  <text x="110" y="236" fill="#F2FDFF" font-size="68" font-family="Arial Black, Arial, sans-serif">Fortune 500 marketing horsepower,</text>
+  <text x="110" y="310" fill="#F2FDFF" font-size="68" font-family="Arial Black, Arial, sans-serif">now accessible to growth-stage teams.</text>
+  <text x="110" y="362" fill="#A8C5D1" font-size="25" font-family="Arial, sans-serif">Flatbird Labs helps companies modernize strategy, media, measurement, and execution</text>
+  <text x="110" y="396" fill="#A8C5D1" font-size="25" font-family="Arial, sans-serif">without building an enterprise-sized marketing org.</text>
+
+  <rect x="110" y="438" rx="34" width="315" height="70" fill="url(#cta)"/>
+  <text x="158" y="483" fill="#02131A" font-size="25" font-family="Arial, sans-serif" font-weight="700">Book Strategy Call</text>
+  <rect x="442" y="438" rx="34" width="280" height="70" fill="#0F2534" stroke="#2F5B73"/>
+  <text x="492" y="483" fill="#D9EFF8" font-size="24" font-family="Arial, sans-serif" font-weight="700">View Offerings</text>
+
+  <!-- Stacked hero card (no overlap) -->
+  <rect x="110" y="546" rx="18" width="980" height="250" fill="#091A25" stroke="#2B5870"/>
+  <text x="146" y="604" fill="#E8FCFF" font-size="36" font-family="Arial Black, Arial, sans-serif">What changes in 90 days</text>
+  <circle cx="156" cy="652" r="6" fill="#47DFC9"/>
+  <text x="178" y="659" fill="#B8D5E3" font-size="24" font-family="Arial, sans-serif">Pipeline-aligned growth priorities</text>
+  <circle cx="156" cy="702" r="6" fill="#47DFC9"/>
+  <text x="178" y="709" fill="#B8D5E3" font-size="24" font-family="Arial, sans-serif">Modern channel execution cadence</text>
+  <circle cx="156" cy="752" r="6" fill="#47DFC9"/>
+  <text x="178" y="759" fill="#B8D5E3" font-size="24" font-family="Arial, sans-serif">Board-ready measurement narrative</text>
+
+  <text x="110" y="884" fill="#53E4CB" font-size="17" letter-spacing="2.4" font-family="Arial, sans-serif" font-weight="700">PRODUCT OFFERINGS</text>
+  <text x="110" y="948" fill="#F2FDFF" font-size="50" font-family="Arial Black, Arial, sans-serif">Modular services that accelerate transformation.</text>
+
+  <rect x="110" y="982" rx="16" width="660" height="170" fill="#0A1E2A" stroke="#2A4E63"/>
+  <text x="145" y="1038" fill="#ECFFFF" font-size="33" font-family="Arial Black, Arial, sans-serif">Transformation Blueprint</text>
+  <rect x="830" y="982" rx="16" width="660" height="170" fill="#0A1E2A" stroke="#2A4E63"/>
+  <text x="865" y="1038" fill="#ECFFFF" font-size="33" font-family="Arial Black, Arial, sans-serif">Fractional Growth Leadership</text>
+
+  <rect x="110" y="1170" rx="16" width="660" height="170" fill="#0A1E2A" stroke="#2A4E63"/>
+  <text x="145" y="1226" fill="#ECFFFF" font-size="33" font-family="Arial Black, Arial, sans-serif">Revenue Media Studio</text>
+  <rect x="830" y="1170" rx="16" width="660" height="170" fill="#0A1E2A" stroke="#2A4E63"/>
+  <text x="865" y="1226" fill="#ECFFFF" font-size="33" font-family="Arial Black, Arial, sans-serif">Measurement + Attribution</text>
+
+  <rect x="0" y="1404" width="1600" height="274" fill="#08151F"/>
+  <text x="110" y="1468" fill="#53E4CB" font-size="17" letter-spacing="2.4" font-family="Arial, sans-serif" font-weight="700">USE CASES</text>
+  <text x="110" y="1532" fill="#F2FDFF" font-size="50" font-family="Arial Black, Arial, sans-serif">Proof points from prior engagements.</text>
+
+  <rect x="110" y="1560" rx="16" width="450" height="102" fill="#0A1E2A" stroke="#2A4E63"/>
+  <rect x="576" y="1560" rx="16" width="450" height="102" fill="#0A1E2A" stroke="#2A4E63"/>
+  <rect x="1042" y="1560" rx="16" width="450" height="102" fill="#0A1E2A" stroke="#2A4E63"/>
+
+  <text x="110" y="1758" fill="#53E4CB" font-size="17" letter-spacing="2.4" font-family="Arial, sans-serif" font-weight="700">CONTACT FLATBIRD LABS</text>
+  <text x="110" y="1822" fill="#F2FDFF" font-size="50" font-family="Arial Black, Arial, sans-serif">Tell us where you are and where you need to go.</text>
+  <text x="110" y="1868" fill="#A8C5D1" font-size="24" font-family="Arial, sans-serif">hello@flatbirdlabs.com  |  +1 (555) 210-8842</text>
+
+  <!-- Stacked contact form (no overlap) -->
+  <rect x="110" y="1900" rx="16" width="980" height="220" fill="#0A1E2A" stroke="#2A4E63"/>
+  <rect x="142" y="1940" rx="9" width="300" height="40" fill="#06141E" stroke="#345C72"/>
+  <rect x="460" y="1940" rx="9" width="300" height="40" fill="#06141E" stroke="#345C72"/>
+  <rect x="142" y="1994" rx="9" width="618" height="40" fill="#06141E" stroke="#345C72"/>
+  <rect x="142" y="2048" rx="9" width="618" height="42" fill="#06141E" stroke="#345C72"/>
+  <rect x="780" y="2048" rx="24" width="220" height="44" fill="url(#cta)"/>
+  <text x="828" y="2076" fill="#02131A" font-size="20" font-family="Arial, sans-serif" font-weight="700">Send Inquiry</text>
+</svg>

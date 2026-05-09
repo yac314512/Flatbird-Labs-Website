@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flatbird Labs Preview | Round 3</title>
+  <style>
+    :root {
+      --bg: #eef4ff;
+      --ink: #070c12;
+      --ink-soft: #45546a;
+      --line: #cad6f2;
+      --surface: #ffffff;
+      --brand: #1d5fff;
+      --shadow: 0 22px 46px rgba(14, 27, 57, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 10% 8%, rgba(29, 95, 255, 0.12), transparent 20%),
+        linear-gradient(180deg, #f7fbff 0%, var(--bg) 100%);
+    }
+
+    .shell {
+      width: min(1280px, 92vw);
+      margin: 0 auto;
+      padding: 2rem 0 3rem;
+    }
+
+    .header {
+      margin-bottom: 1.5rem;
+    }
+
+    .eyebrow {
+      margin: 0 0 0.5rem;
+      color: var(--brand);
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0 0 0.5rem;
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      line-height: 1.1;
+    }
+
+    p {
+      margin: 0;
+      color: var(--ink-soft);
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .frame {
+      padding: 1rem;
+      border: 1px solid var(--line);
+      border-radius: 1.2rem;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <section class="header">
+      <p class="eyebrow">Local Preview</p>
+      <h1>Flatbird Labs v3 Round 3</h1>
+      <p>This HTML page wraps the latest preview image for easier browser viewing. It is local only and not connected to the live site.</p>
+    </section>
+
+    <section class="frame">
+      <img
+        src="./preview-site-copy-v3-round-3.png"
+        alt="Flatbird Labs v3 round 3 preview"
+      />
+    </section>
+  </main>
+</body>
+</html>

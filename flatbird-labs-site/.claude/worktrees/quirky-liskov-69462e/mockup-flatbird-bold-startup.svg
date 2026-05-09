@@ -1,0 +1,117 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2400" viewBox="0 0 1600 2400" fill="none">
+  <defs>
+    <linearGradient id="bg1" x1="0" y1="0" x2="1600" y2="2400" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#06131B"/>
+      <stop offset="0.55" stop-color="#0C2432"/>
+      <stop offset="1" stop-color="#071922"/>
+    </linearGradient>
+    <linearGradient id="cta1" x1="200" y1="540" x2="560" y2="620" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00D1B2"/>
+      <stop offset="1" stop-color="#00A6FF"/>
+    </linearGradient>
+    <linearGradient id="cardStroke" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#45E2C9" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#2B99FF" stop-opacity="0.15"/>
+    </linearGradient>
+    <radialGradient id="orbA" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1320 260) rotate(90) scale(300)">
+      <stop stop-color="#00FFD1" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#00FFD1" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orbB" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(260 520) rotate(90) scale(280)">
+      <stop stop-color="#2E8BFF" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#2E8BFF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow1" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#00B8C8" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="2400" fill="url(#bg1)"/>
+  <rect width="1600" height="92" fill="#071019"/>
+  <rect y="91" width="1600" height="1" fill="#1E3A4A"/>
+  <circle cx="1320" cy="260" r="310" fill="url(#orbA)"/>
+  <circle cx="260" cy="520" r="290" fill="url(#orbB)"/>
+
+  <text x="110" y="58" fill="#ECFFFC" font-size="38" font-family="Arial Black, Arial, sans-serif" letter-spacing="0.5">FLATBIRD LABS</text>
+  <text x="1010" y="58" fill="#B8D5E3" font-size="22" font-family="Arial, sans-serif">Offerings</text>
+  <text x="1160" y="58" fill="#B8D5E3" font-size="22" font-family="Arial, sans-serif">Use Cases</text>
+  <text x="1290" y="58" fill="#B8D5E3" font-size="22" font-family="Arial, sans-serif">Contact</text>
+
+  <text x="110" y="184" fill="#53E4CB" font-size="20" letter-spacing="3" font-family="Arial, sans-serif" font-weight="700">MARKETING TRANSFORMATION FIRM</text>
+  <text x="110" y="280" fill="#F2FDFF" font-size="82" font-family="Arial Black, Arial, sans-serif">Enterprise-level marketing</text>
+  <text x="110" y="370" fill="#F2FDFF" font-size="82" font-family="Arial Black, Arial, sans-serif">strategy for breakout growth.</text>
+  <text x="110" y="438" fill="#A8C5D1" font-size="30" font-family="Arial, sans-serif">Flatbird Labs equips ambitious companies with battle-tested GTM systems, channel execution,</text>
+  <text x="110" y="478" fill="#A8C5D1" font-size="30" font-family="Arial, sans-serif">and performance measurement borrowed from Fortune 500 playbooks.</text>
+
+  <rect x="110" y="534" rx="40" width="360" height="82" fill="url(#cta1)" filter="url(#shadow1)"/>
+  <text x="165" y="586" fill="#02131A" font-size="30" font-family="Arial, sans-serif" font-weight="700">Book Strategy Call</text>
+  <rect x="492" y="534" rx="40" width="320" height="82" fill="#0F2534" stroke="#2F5B73"/>
+  <text x="548" y="586" fill="#D9EFF8" font-size="28" font-family="Arial, sans-serif" font-weight="700">View Offerings</text>
+
+  <rect x="930" y="214" rx="24" width="560" height="452" fill="#091A25" stroke="url(#cardStroke)"/>
+  <text x="980" y="294" fill="#E8FCFF" font-size="42" font-family="Arial Black, Arial, sans-serif">What changes in 90 days</text>
+  <circle cx="992" cy="360" r="7" fill="#47DFC9"/>
+  <text x="1018" y="369" fill="#B8D5E3" font-size="28" font-family="Arial, sans-serif">Pipeline-aligned growth priorities</text>
+  <circle cx="992" cy="426" r="7" fill="#47DFC9"/>
+  <text x="1018" y="435" fill="#B8D5E3" font-size="28" font-family="Arial, sans-serif">Modern channel execution cadence</text>
+  <circle cx="992" cy="492" r="7" fill="#47DFC9"/>
+  <text x="1018" y="501" fill="#B8D5E3" font-size="28" font-family="Arial, sans-serif">Board-ready measurement narrative</text>
+
+  <text x="110" y="760" fill="#53E4CB" font-size="19" letter-spacing="3" font-family="Arial, sans-serif" font-weight="700">PRODUCT OFFERINGS</text>
+  <text x="110" y="836" fill="#F2FDFF" font-size="58" font-family="Arial Black, Arial, sans-serif">Modular services that accelerate transformation.</text>
+
+  <rect x="110" y="888" rx="18" width="660" height="210" fill="#0A1E2A" stroke="#2A4E63"/>
+  <text x="148" y="955" fill="#ECFFFF" font-size="37" font-family="Arial Black, Arial, sans-serif">Transformation Blueprint</text>
+  <text x="148" y="1002" fill="#A8C5D1" font-size="24" font-family="Arial, sans-serif">Full-funnel diagnostic and prioritized roadmap</text>
+  <text x="148" y="1034" fill="#A8C5D1" font-size="24" font-family="Arial, sans-serif">to align strategy, media, and operations.</text>
+
+  <rect x="830" y="888" rx="18" width="660" height="210" fill="#0A1E2A" stroke="#2A4E63"/>
+  <text x="868" y="955" fill="#ECFFFF" font-size="37" font-family="Arial Black, Arial, sans-serif">Fractional Growth Leadership</text>
+  <text x="868" y="1002" fill="#A8C5D1" font-size="24" font-family="Arial, sans-serif">Executive-level guidance for scaling teams,</text>
+  <text x="868" y="1034" fill="#A8C5D1" font-size="24" font-family="Arial, sans-serif">planning, and marketing execution rhythm.</text>
+
+  <rect x="110" y="1126" rx="18" width="660" height="210" fill="#0A1E2A" stroke="#2A4E63"/>
+  <text x="148" y="1193" fill="#ECFFFF" font-size="37" font-family="Arial Black, Arial, sans-serif">Revenue Media Studio</text>
+  <text x="148" y="1240" fill="#A8C5D1" font-size="24" font-family="Arial, sans-serif">Search, social, and lifecycle orchestration</text>
+  <text x="148" y="1272" fill="#A8C5D1" font-size="24" font-family="Arial, sans-serif">to scale acquisition profitably.</text>
+
+  <rect x="830" y="1126" rx="18" width="660" height="210" fill="#0A1E2A" stroke="#2A4E63"/>
+  <text x="868" y="1193" fill="#ECFFFF" font-size="37" font-family="Arial Black, Arial, sans-serif">Measurement + Attribution</text>
+  <text x="868" y="1240" fill="#A8C5D1" font-size="24" font-family="Arial, sans-serif">Instrumentation, dashboarding, and decision</text>
+  <text x="868" y="1272" fill="#A8C5D1" font-size="24" font-family="Arial, sans-serif">frameworks leadership can act on.</text>
+
+  <rect x="0" y="1410" width="1600" height="420" fill="#08151F"/>
+  <text x="110" y="1492" fill="#53E4CB" font-size="19" letter-spacing="3" font-family="Arial, sans-serif" font-weight="700">USE CASES</text>
+  <text x="110" y="1566" fill="#F2FDFF" font-size="58" font-family="Arial Black, Arial, sans-serif">Proof points from prior client engagements.</text>
+
+  <rect x="110" y="1614" rx="18" width="450" height="178" fill="#0A1E2A" stroke="#2A4E63"/>
+  <text x="140" y="1661" fill="#47DFC9" font-size="17" font-family="Arial, sans-serif" font-weight="700">B2B SAAS</text>
+  <text x="140" y="1704" fill="#ECFFFF" font-size="30" font-family="Arial Black, Arial, sans-serif">38% qualified pipeline lift</text>
+  <text x="140" y="1744" fill="#A8C5D1" font-size="22" font-family="Arial, sans-serif">within two quarters.</text>
+
+  <rect x="576" y="1614" rx="18" width="450" height="178" fill="#0A1E2A" stroke="#2A4E63"/>
+  <text x="606" y="1661" fill="#47DFC9" font-size="17" font-family="Arial, sans-serif" font-weight="700">CONSUMER</text>
+  <text x="606" y="1704" fill="#ECFFFF" font-size="30" font-family="Arial Black, Arial, sans-serif">27% lower blended CAC</text>
+  <text x="606" y="1744" fill="#A8C5D1" font-size="22" font-family="Arial, sans-serif">with higher LTV mix.</text>
+
+  <rect x="1042" y="1614" rx="18" width="450" height="178" fill="#0A1E2A" stroke="#2A4E63"/>
+  <text x="1072" y="1661" fill="#47DFC9" font-size="17" font-family="Arial, sans-serif" font-weight="700">HEALTH SERVICES</text>
+  <text x="1072" y="1704" fill="#ECFFFF" font-size="30" font-family="Arial Black, Arial, sans-serif">3 markets launched</text>
+  <text x="1072" y="1744" fill="#A8C5D1" font-size="22" font-family="Arial, sans-serif">with predictable demand.</text>
+
+  <text x="110" y="1910" fill="#53E4CB" font-size="19" letter-spacing="3" font-family="Arial, sans-serif" font-weight="700">CONTACT FLATBIRD LABS</text>
+  <text x="110" y="1984" fill="#F2FDFF" font-size="58" font-family="Arial Black, Arial, sans-serif">Tell us your growth goal. We will map the path.</text>
+  <text x="110" y="2050" fill="#A8C5D1" font-size="28" font-family="Arial, sans-serif">hello@flatbirdlabs.com</text>
+  <text x="110" y="2090" fill="#A8C5D1" font-size="28" font-family="Arial, sans-serif">+1 (555) 210-8842</text>
+
+  <rect x="780" y="1910" rx="18" width="710" height="360" fill="#0A1E2A" stroke="#2A4E63"/>
+  <rect x="818" y="1962" rx="10" width="306" height="48" fill="#06141E" stroke="#345C72"/>
+  <rect x="1142" y="1962" rx="10" width="306" height="48" fill="#06141E" stroke="#345C72"/>
+  <rect x="818" y="2029" rx="10" width="630" height="48" fill="#06141E" stroke="#345C72"/>
+  <rect x="818" y="2096" rx="10" width="630" height="94" fill="#06141E" stroke="#345C72"/>
+  <rect x="818" y="2206" rx="28" width="260" height="52" fill="url(#cta1)"/>
+  <text x="875" y="2239" fill="#02131A" font-size="22" font-family="Arial, sans-serif" font-weight="700">Send Inquiry</text>
+
+  <rect x="0" y="2350" width="1600" height="50" fill="#050D13"/>
+  <text x="110" y="2383" fill="#89A8B8" font-size="18" font-family="Arial, sans-serif">© 2026 Flatbird Labs. Enterprise-grade marketing transformation.</text>
+</svg>

@@ -1,0 +1,240 @@
+<svg width="1600" height="5200" viewBox="0 0 1600 5200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F7FBFF"/>
+      <stop offset="45%" stop-color="#EEF4FF"/>
+      <stop offset="100%" stop-color="#F4F8FF"/>
+    </linearGradient>
+    <linearGradient id="heroCard" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#102255"/>
+      <stop offset="100%" stop-color="#08152F"/>
+    </linearGradient>
+    <linearGradient id="button" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1D5FFF"/>
+      <stop offset="100%" stop-color="#0F3FB7"/>
+    </linearGradient>
+    <linearGradient id="sectionDark" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0E1B39"/>
+      <stop offset="100%" stop-color="#08152F"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#0E1B39" flood-opacity="0.14"/>
+    </filter>
+    <style>
+      .display { font: 800 74px 'Sora', Arial, sans-serif; fill: #070C12; letter-spacing: -2px; }
+      .h2 { font: 800 46px 'Sora', Arial, sans-serif; fill: #070C12; letter-spacing: -1.2px; }
+      .h2-light { font: 800 46px 'Sora', Arial, sans-serif; fill: white; letter-spacing: -1.2px; }
+      .h3 { font: 700 26px 'Sora', Arial, sans-serif; fill: #070C12; }
+      .h3-light { font: 700 26px 'Sora', Arial, sans-serif; fill: white; }
+      .eyebrow { font: 800 16px 'Space Grotesk', Arial, sans-serif; fill: #0F3FB7; letter-spacing: 3px; text-transform: uppercase; }
+      .eyebrow-light { font: 800 16px 'Space Grotesk', Arial, sans-serif; fill: #8FB0FF; letter-spacing: 3px; text-transform: uppercase; }
+      .body { font: 500 22px 'Space Grotesk', Arial, sans-serif; fill: #45546A; }
+      .body-dark { font: 500 20px 'Space Grotesk', Arial, sans-serif; fill: #45546A; }
+      .body-light { font: 500 20px 'Space Grotesk', Arial, sans-serif; fill: rgba(255,255,255,0.88); }
+      .small { font: 700 18px 'Space Grotesk', Arial, sans-serif; fill: #081B4F; }
+      .small-light { font: 700 18px 'Space Grotesk', Arial, sans-serif; fill: white; }
+      .metric { font: 700 18px 'Space Grotesk', Arial, sans-serif; fill: #0F3FB7; }
+      .nav { font: 700 16px 'Space Grotesk', Arial, sans-serif; fill: #081B4F; }
+      .badge { font: 700 18px 'Space Grotesk', Arial, sans-serif; fill: #070C12; }
+      .btn { font: 700 18px 'Space Grotesk', Arial, sans-serif; }
+      .field { font: 600 18px 'Space Grotesk', Arial, sans-serif; fill: #45546A; }
+      .label { font: 700 14px 'Space Grotesk', Arial, sans-serif; fill: #0F3FB7; letter-spacing: 2px; text-transform: uppercase; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="5200" fill="url(#bg)"/>
+  <circle cx="1300" cy="190" r="250" fill="#1D5FFF" fill-opacity="0.12"/>
+  <circle cx="190" cy="610" r="180" fill="#081B4F" fill-opacity="0.10"/>
+
+  <rect x="0" y="0" width="1600" height="96" fill="rgba(255,255,255,0.88)"/>
+  <line x1="0" y1="96" x2="1600" y2="96" stroke="#CAD6F2"/>
+  <text x="120" y="58" class="h3">Flatbird Labs</text>
+  <text x="880" y="58" class="nav">Our Approach</text>
+  <text x="1015" y="58" class="nav">Our Offerings</text>
+  <text x="1165" y="58" class="nav">Our System</text>
+  <text x="1285" y="58" class="nav">Our Clients</text>
+  <text x="1390" y="58" class="nav">About Us</text>
+
+  <text x="120" y="172" class="label">Preview Only - Local Draft</text>
+
+  <text x="120" y="240" class="eyebrow">Built by operators. Not consultants.</text>
+  <text x="120" y="332" class="display">We've learned the hard</text>
+  <text x="120" y="414" class="display">lessons, so you don't</text>
+  <text x="120" y="496" class="display">have to.</text>
+  <text x="120" y="564" class="small">We know which levers move the numbers - and we know how to pull them.</text>
+  <text x="120" y="632" class="body">Flatbird Labs was built by former Fortune 500 CMOs who have sat in your seat -</text>
+  <text x="120" y="664" class="body">managing hundreds of millions in marketing spend, holding agencies accountable,</text>
+  <text x="120" y="696" class="body">and delivering growth when the board was watching.</text>
+
+  <rect x="120" y="752" rx="28" ry="28" width="226" height="58" fill="url(#button)" filter="url(#shadow)"/>
+  <text x="155" y="789" class="btn" fill="white">Kickstart Your Growth</text>
+  <rect x="366" y="752" rx="28" ry="28" width="178" height="58" fill="white" stroke="#9EB6EB"/>
+  <text x="413" y="789" class="btn" fill="#081B4F">How We Work</text>
+
+  <g filter="url(#shadow)">
+    <rect x="950" y="220" rx="28" ry="28" width="500" height="420" fill="url(#heroCard)"/>
+  </g>
+  <text x="992" y="284" class="eyebrow-light">What this looks like in practice</text>
+  <text x="992" y="350" class="h3-light">One focused constraint.</text>
+  <text x="992" y="386" class="body-light">Not ten competing priorities.</text>
+  <text x="992" y="448" class="h3-light">Working systems.</text>
+  <text x="992" y="484" class="body-light">Not presentation decks.</text>
+  <text x="992" y="546" class="h3-light">Operator experience.</text>
+  <text x="992" y="582" class="body-light">Not abstract recommendations.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="120" y="884" rx="24" ry="24" width="1330" height="132" fill="rgba(255,255,255,0.82)" stroke="#CAD6F2"/>
+  </g>
+  <text x="162" y="930" class="eyebrow">Where we've driven growth</text>
+  <g>
+    <rect x="160" y="954" rx="22" ry="22" width="146" height="42" fill="white" stroke="#CAD6F2"/>
+    <text x="197" y="981" class="badge">Walmart</text>
+    <rect x="322" y="954" rx="22" ry="22" width="182" height="42" fill="white" stroke="#CAD6F2"/>
+    <text x="352" y="981" class="badge">Dollar General</text>
+    <rect x="520" y="954" rx="22" ry="22" width="114" height="42" fill="white" stroke="#CAD6F2"/>
+    <text x="555" y="981" class="badge">Lidl US</text>
+    <rect x="650" y="954" rx="22" ry="22" width="154" height="42" fill="white" stroke="#CAD6F2"/>
+    <text x="684" y="981" class="badge">Wells Fargo</text>
+    <rect x="820" y="954" rx="22" ry="22" width="130" height="42" fill="white" stroke="#CAD6F2"/>
+    <text x="857" y="981" class="badge">Citibank</text>
+    <rect x="966" y="954" rx="22" ry="22" width="252" height="42" fill="white" stroke="#CAD6F2"/>
+    <text x="997" y="981" class="badge">Anheuser-Busch InBev</text>
+  </g>
+
+  <text x="120" y="1148" class="eyebrow">Finding the Real Growth Problem</text>
+  <text x="120" y="1220" class="h2">Most CMOs are solving the wrong problem</text>
+  <text x="120" y="1288" class="body">They think they have a traffic problem when they really have a conversion problem.</text>
+  <text x="120" y="1320" class="body">Or they have a retention problem they're treating like an acquisition problem.</text>
+  <text x="120" y="1384" class="body">Our job is to diagnose which of the three problems you actually have - Traffic,</text>
+  <text x="120" y="1416" class="body">Conversion, or Retention - and build the system to fix it in 90 days.</text>
+  <text x="120" y="1482" class="small">Most companies try to solve all three at once. We find the one that's costing</text>
+  <text x="120" y="1512" class="small">you the most - and fix it first.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="930" y="1168" rx="26" ry="26" width="520" height="432" fill="#F7FBFF" stroke="#CAD6F2"/>
+  </g>
+  <text x="968" y="1218" class="eyebrow">The three key problems we solve</text>
+  <rect x="968" y="1260" rx="20" ry="20" width="444" height="88" fill="white" stroke="#CAD6F2"/>
+  <text x="998" y="1313" class="h3">Traffic</text>
+  <rect x="968" y="1366" rx="20" ry="20" width="444" height="88" fill="white" stroke="#CAD6F2"/>
+  <text x="998" y="1419" class="h3">Conversion</text>
+  <rect x="968" y="1472" rx="20" ry="20" width="444" height="88" fill="white" stroke="#CAD6F2"/>
+  <text x="998" y="1525" class="h3">Retention</text>
+
+  <text x="120" y="1738" class="eyebrow">What We Build</text>
+  <text x="120" y="1810" class="h2">No decks. Just working systems to deliver growth</text>
+  <g filter="url(#shadow)">
+    <rect x="120" y="1860" rx="24" ry="24" width="630" height="210" fill="white" stroke="#CAD6F2"/>
+    <rect x="790" y="1860" rx="24" ry="24" width="630" height="210" fill="white" stroke="#CAD6F2"/>
+    <rect x="120" y="2096" rx="24" ry="24" width="630" height="210" fill="white" stroke="#CAD6F2"/>
+    <rect x="790" y="2096" rx="24" ry="24" width="630" height="210" fill="white" stroke="#CAD6F2"/>
+    <rect x="120" y="2332" rx="24" ry="24" width="630" height="210" fill="white" stroke="#CAD6F2"/>
+    <rect x="790" y="2332" rx="24" ry="24" width="630" height="210" fill="white" stroke="#CAD6F2"/>
+  </g>
+  <text x="158" y="1922" class="h3">Growth Diagnostic</text>
+  <text x="158" y="1964" class="body-dark">Find the real growth constraint before you</text>
+  <text x="158" y="1992" class="body-dark">spend another dollar solving the wrong problem.</text>
+  <text x="828" y="1922" class="h3">Revenue Attribution System</text>
+  <text x="828" y="1964" class="body-dark">Build a defensible answer to which dollars are</text>
+  <text x="828" y="1992" class="body-dark">driving revenue and which ones are not.</text>
+  <text x="158" y="2158" class="h3">Customer Acquisition Engine</text>
+  <text x="158" y="2200" class="body-dark">Create the media and creative infrastructure to</text>
+  <text x="158" y="2228" class="body-dark">bring in customers at a viable cost.</text>
+  <text x="828" y="2158" class="h3">Personalization and Loyalty Infrastructure</text>
+  <text x="828" y="2200" class="body-dark">Reach customers with the right message at the</text>
+  <text x="828" y="2228" class="body-dark">right moment, without a two-year tech project.</text>
+  <text x="158" y="2394" class="h3">Market Expansion Infrastructure</text>
+  <text x="158" y="2436" class="body-dark">Launch into new markets, products, and segments</text>
+  <text x="158" y="2464" class="body-dark">with systems built to sustain growth after launch.</text>
+  <text x="828" y="2394" class="h3">Continuous Performance Intelligence</text>
+  <text x="828" y="2436" class="body-dark">Monitor signals, reallocate spend, and keep</text>
+  <text x="828" y="2464" class="body-dark">leadership ahead of what's changing.</text>
+
+  <rect x="0" y="2630" width="1600" height="950" fill="url(#sectionDark)"/>
+  <text x="120" y="2746" class="eyebrow-light">How It Works</text>
+  <text x="120" y="2820" class="h2-light">90 days from diagnosis to a working system</text>
+  <g filter="url(#shadow)">
+    <rect x="120" y="2888" rx="24" ry="24" width="410" height="230" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.14)"/>
+    <rect x="595" y="2888" rx="24" ry="24" width="410" height="230" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.14)"/>
+    <rect x="1070" y="2888" rx="24" ry="24" width="410" height="230" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.14)"/>
+    <rect x="120" y="3140" rx="24" ry="24" width="410" height="230" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.14)"/>
+    <rect x="595" y="3140" rx="24" ry="24" width="410" height="230" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.14)"/>
+    <rect x="1070" y="3140" rx="24" ry="24" width="410" height="230" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.14)"/>
+  </g>
+  <text x="156" y="2932" class="eyebrow-light">Step 1 - Diagnose</text>
+  <text x="156" y="2992" class="h3-light">Find the Real Growth Problem</text>
+  <text x="156" y="3040" class="body-light">Dig into behavior, channel performance,</text>
+  <text x="156" y="3070" class="body-light">spend allocation, and competitive position.</text>
+  <text x="631" y="2932" class="eyebrow-light">Step 2 - Blueprint</text>
+  <text x="631" y="2992" class="h3-light">Build the Growth Plan</text>
+  <text x="631" y="3040" class="body-light">Turn diagnosis into a focused plan with</text>
+  <text x="631" y="3070" class="body-light">clear metrics and leadership visibility.</text>
+  <text x="1106" y="2932" class="eyebrow-light">Step 3 - Build</text>
+  <text x="1106" y="2992" class="h3-light">Construct the System</text>
+  <text x="1106" y="3040" class="body-light">Build the growth product around your</text>
+  <text x="1106" y="3070" class="body-light">business, data, and revenue goals.</text>
+  <text x="156" y="3184" class="eyebrow-light">Step 4 - Validate</text>
+  <text x="156" y="3244" class="h3-light">Confirm Before You Scale</text>
+  <text x="156" y="3292" class="body-light">Validate the system and confirm the right</text>
+  <text x="156" y="3322" class="body-light">signals before budget shifts.</text>
+  <text x="631" y="3184" class="eyebrow-light">Step 5 - Activate</text>
+  <text x="631" y="3244" class="h3-light">Launch and Drive Revenue</text>
+  <text x="631" y="3292" class="body-light">Activate, monitor performance, and close</text>
+  <text x="631" y="3322" class="body-light">the gap between strategy and revenue.</text>
+  <text x="1106" y="3184" class="eyebrow-light">Always-On</text>
+  <text x="1106" y="3244" class="h3-light">Ongoing Growth Intelligence</text>
+  <text x="1106" y="3292" class="body-light">Continuous monitoring and spend</text>
+  <text x="1106" y="3322" class="body-light">optimization keep results compounding.</text>
+
+  <text x="120" y="3732" class="eyebrow">Who We Work With</text>
+  <text x="120" y="3806" class="h2">We work with executives who are done waiting for answers</text>
+  <text x="120" y="3854" class="h2">and who need growth - now</text>
+  <g filter="url(#shadow)">
+    <rect x="120" y="3910" rx="24" ry="24" width="630" height="250" fill="white" stroke="#CAD6F2"/>
+    <rect x="790" y="3910" rx="24" ry="24" width="630" height="250" fill="white" stroke="#CAD6F2"/>
+    <rect x="120" y="4190" rx="24" ry="24" width="630" height="250" fill="white" stroke="#CAD6F2"/>
+    <rect x="790" y="4190" rx="24" ry="24" width="630" height="250" fill="white" stroke="#CAD6F2"/>
+  </g>
+  <text x="158" y="3956" class="eyebrow">The CMO</text>
+  <text x="158" y="4012" class="h3">You've sat through enough agency presentations.</text>
+  <text x="158" y="4050" class="body-dark">You want someone who's been in your seat.</text>
+  <text x="158" y="4112" class="metric">Outcome: Faster decisions and defensible ROI.</text>
+  <text x="828" y="3956" class="eyebrow">The CEO</text>
+  <text x="828" y="4012" class="h3">You know where you want to grow.</text>
+  <text x="828" y="4050" class="body-dark">You need the system to get there in 90 days.</text>
+  <text x="828" y="4112" class="metric">Outcome: A growth system tied to revenue.</text>
+  <text x="158" y="4236" class="eyebrow">The CFO</text>
+  <text x="158" y="4292" class="h3">You suspect half your marketing budget isn't working.</text>
+  <text x="158" y="4330" class="body-dark">We build the system that shows which spend drives revenue.</text>
+  <text x="158" y="4392" class="metric">Outcome: Budget accountability and measurable ROI.</text>
+  <text x="828" y="4236" class="eyebrow">The PE Operating Partner</text>
+  <text x="828" y="4292" class="h3">You need portfolio companies to grow faster.</text>
+  <text x="828" y="4330" class="body-dark">One engagement model. Deployable across the portfolio.</text>
+  <text x="828" y="4392" class="metric">Outcome: Faster revenue growth and stronger EBITDA.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="120" y="4508" rx="28" ry="28" width="1330" height="300" fill="white" stroke="#CAD6F2"/>
+  </g>
+  <text x="160" y="4560" class="eyebrow">Who We Are</text>
+  <text x="160" y="4628" class="h2">We are operators who have lived the problem.</text>
+  <text x="160" y="4688" class="body">Flatbird Labs was founded by Michael Chao and Patrick Hook. Between us,</text>
+  <text x="160" y="4720" class="body">we have held CMO and VP-level marketing roles at Walmart, Dollar General,</text>
+  <text x="160" y="4752" class="body">Lidl US, Wells Fargo, and Citibank, managing $240M+ in budgets.</text>
+  <text x="160" y="4816" class="small">We work with a select number of companies at a time. If you want an operator</text>
+  <text x="160" y="4846" class="small">in the room, not another deck, then let's talk.</text>
+
+  <text x="120" y="4984" class="eyebrow">Start a Conversation</text>
+  <text x="120" y="5058" class="h2">Tell us where you want to grow.</text>
+  <text x="120" y="5106" class="h2">We'll come back with a real point of view.</text>
+  <g filter="url(#shadow)">
+    <rect x="900" y="4900" rx="28" ry="28" width="550" height="220" fill="white" stroke="#CAD6F2"/>
+  </g>
+  <text x="936" y="4950" class="small">Name *</text>
+  <rect x="936" y="4964" rx="14" ry="14" width="220" height="42" fill="#F7FBFF" stroke="#CAD6F2"/>
+  <text x="1182" y="4950" class="small">Work Email *</text>
+  <rect x="1182" y="4964" rx="14" ry="14" width="232" height="42" fill="#F7FBFF" stroke="#CAD6F2"/>
+  <text x="936" y="5038" class="small">Company *</text>
+  <rect x="936" y="5052" rx="14" ry="14" width="478" height="42" fill="#F7FBFF" stroke="#CAD6F2"/>
+  <rect x="936" y="5110" rx="22" ry="22" width="200" height="52" fill="url(#button)"/>
+  <text x="992" y="5142" class="btn" fill="white">Send Inquiry</text>
+</svg>

@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flatbird Labs — Brand Identity System</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink:       #0F0E0C;
+    --cream:     #F5F1EA;
+    --rust:      #C94A2B;
+    --sky:       #2B7FC9;
+    --sage:      #4A7C59;
+    --gold:      #D4A843;
+    --mid:       #7A7468;
+    --light:     #E8E2D8;
+    --white:     #FDFCFA;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'DM Mono', monospace;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* ── COVER ── */
+  .cover {
+    min-height: 100vh;
+    background: var(--ink);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding: 60px 40px;
+  }
+
+  .cover-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(245,241,234,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(245,241,234,0.04) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  .cover-noise {
+    position: absolute;
+    inset: 0;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  }
+
+  .cover-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 48px;
+    opacity: 0.9;
+    position: relative;
+  }
+
+  .cover-logo-wrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+  }
+
+  .cover-bird svg {
+    width: 120px;
+    height: 120px;
+    animation: float 5s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50%       { transform: translateY(-10px); }
+  }
+
+  .cover-wordmark {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: clamp(48px, 8vw, 88px);
+    color: var(--cream);
+    letter-spacing: -0.03em;
+    line-height: 1;
+    position: relative;
+  }
+
+  .cover-wordmark span {
+    color: var(--rust);
+  }
+
+  .cover-sub {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    color: var(--mid);
+    text-transform: uppercase;
+    margin-top: 8px;
+  }
+
+  .cover-tagline {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: clamp(18px, 3vw, 26px);
+    color: var(--cream);
+    opacity: 0.7;
+    margin-top: 48px;
+    text-align: center;
+    max-width: 560px;
+    position: relative;
+  }
+
+  .cover-footer {
+    position: absolute;
+    bottom: 32px;
+    display: flex;
+    gap: 40px;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--mid);
+    text-transform: uppercase;
+  }
+
+  /* ── SECTIONS ── */
+  .section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 40px;
+    border-bottom: 1px solid var(--light);
+  }
+
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--rust);
+    margin-bottom: 12px;
+  }
+
+  .section-title {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: clamp(28px, 4vw, 44px);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin-bottom: 48px;
+    color: var(--ink);
+  }
+
+  /* ── LOGO SECTION ── */
+  .logo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2px;
+  }
+
+  .logo-tile {
+    padding: 56px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .logo-tile.dark   { background: var(--ink); }
+  .logo-tile.cream  { background: var(--cream); border: 1px solid var(--light); }
+  .logo-tile.rust   { background: var(--rust); }
+  .logo-tile.sky    { background: var(--sky); }
+
+  .logo-tile-label {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    opacity: 0.5;
+    color: inherit;
+  }
+
+  .logo-tile.dark .logo-tile-label,
+  .logo-tile.rust .logo-tile-label,
+  .logo-tile.sky  .logo-tile-label { color: var(--cream); }
+
+  /* Inline wordmark styles per tile */
+  .wordmark-dark   { font-family:'Syne',sans-serif; font-weight:800; font-size:32px; letter-spacing:-0.02em; color:var(--cream); }
+  .wordmark-dark span { color: var(--rust); }
+  .wordmark-cream  { font-family:'Syne',sans-serif; font-weight:800; font-size:32px; letter-spacing:-0.02em; color:var(--ink); }
+  .wordmark-cream span { color: var(--rust); }
+  .wordmark-rust   { font-family:'Syne',sans-serif; font-weight:800; font-size:32px; letter-spacing:-0.02em; color:var(--cream); }
+  .wordmark-rust span { color: var(--ink); }
+  .wordmark-sky    { font-family:'Syne',sans-serif; font-weight:800; font-size:32px; letter-spacing:-0.02em; color:var(--cream); }
+  .wordmark-sky span { color: var(--gold); }
+
+  /* ── COLOR SECTION ── */
+  .color-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+
+  .swatch {
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  }
+
+  .swatch-block {
+    height: 100px;
+    position: relative;
+  }
+
+  .swatch-block.primary { background: var(--ink); }
+  .swatch-block.secondary { background: var(--rust); }
+  .swatch-block.tertiary { background: var(--sky); }
+  .swatch-block.accent1 { background: var(--gold); }
+  .swatch-block.accent2 { background: var(--sage); }
+  .swatch-block.neutral { background: var(--cream); border: 1px solid var(--light); }
+
+  .swatch-info {
+    background: var(--white);
+    padding: 12px 14px;
+    border: 1px solid var(--light);
+    border-top: none;
+  }
+
+  .swatch-name {
+    font-family: 'Syne', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    margin-bottom: 4px;
+  }
+
+  .swatch-hex {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--mid);
+    letter-spacing: 0.05em;
+  }
+
+  .swatch-role {
+    font-size: 11px;
+    color: var(--mid);
+    margin-top: 4px;
+  }
+
+  /* ── TYPOGRAPHY ── */
+  .type-specimen {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-bottom: 48px;
+  }
+
+  @media (max-width: 680px) { .type-specimen { grid-template-columns: 1fr; } }
+
+  .type-block {
+    background: var(--white);
+    border: 1px solid var(--light);
+    padding: 32px;
+    border-radius: 4px;
+  }
+
+  .type-tag {
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--rust);
+    margin-bottom: 16px;
+  }
+
+  .t-display {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 42px;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .t-serif {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 28px;
+    line-height: 1.3;
+    color: var(--ink);
+  }
+
+  .t-mono-lg {
+    font-family: 'DM Mono', monospace;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--ink);
+    letter-spacing: 0.02em;
+  }
+
+  .t-mono-sm {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    color: var(--mid);
+    line-height: 1.8;
+  }
+
+  .type-meta {
+    margin-top: 16px;
+    font-size: 11px;
+    color: var(--mid);
+    border-top: 1px solid var(--light);
+    padding-top: 12px;
+  }
+
+  /* ── BRAND VOICE ── */
+  .voice-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+
+  .voice-card {
+    background: var(--white);
+    border: 1px solid var(--light);
+    padding: 28px 24px;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .voice-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+  }
+
+  .voice-card:nth-child(1)::before { background: var(--rust); }
+  .voice-card:nth-child(2)::before { background: var(--sky); }
+  .voice-card:nth-child(3)::before { background: var(--gold); }
+  .voice-card:nth-child(4)::before { background: var(--sage); }
+
+  .voice-word {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .voice-desc {
+    font-size: 12px;
+    color: var(--mid);
+    line-height: 1.7;
+  }
+
+  .not-this {
+    margin-top: 10px;
+    font-size: 11px;
+    color: var(--rust);
+    letter-spacing: 0.05em;
+  }
+
+  /* ── CREATIVE BRIEF ── */
+  .brief-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  @media (max-width: 680px) { .brief-grid { grid-template-columns: 1fr; } }
+
+  .brief-block {
+    background: var(--white);
+    border: 1px solid var(--light);
+    padding: 28px;
+    border-radius: 4px;
+  }
+
+  .brief-block.full { grid-column: 1 / -1; }
+
+  .brief-heading {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .brief-heading::before {
+    content: '';
+    display: inline-block;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--rust);
+    flex-shrink: 0;
+  }
+
+  .brief-body {
+    font-size: 12px;
+    color: var(--mid);
+    line-height: 1.9;
+  }
+
+  .brief-body li {
+    margin-left: 16px;
+    margin-bottom: 6px;
+  }
+
+  /* ── TAGLINE OPTIONS ── */
+  .tagline-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-bottom: 48px;
+  }
+
+  .tagline-item {
+    display: flex;
+    align-items: center;
+    padding: 20px 28px;
+    background: var(--white);
+    border: 1px solid var(--light);
+    gap: 20px;
+    transition: background 0.2s;
+  }
+
+  .tagline-item:hover { background: var(--cream); }
+
+  .tagline-num {
+    font-size: 10px;
+    color: var(--rust);
+    letter-spacing: 0.15em;
+    flex-shrink: 0;
+    width: 24px;
+  }
+
+  .tagline-text {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 20px;
+    color: var(--ink);
+    flex: 1;
+  }
+
+  .tagline-note {
+    font-size: 11px;
+    color: var(--mid);
+    max-width: 260px;
+    text-align: right;
+  }
+
+  @media (max-width: 680px) {
+    .tagline-item { flex-direction: column; align-items: flex-start; }
+    .tagline-note { text-align: left; }
+  }
+
+  /* ── ICON SYSTEM ── */
+  .icon-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .icon-tile {
+    background: var(--white);
+    border: 1px solid var(--light);
+    width: 88px; height: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .icon-tile span {
+    font-size: 9px;
+    color: var(--mid);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  /* ── FOOTER ── */
+  .doc-footer {
+    background: var(--ink);
+    color: var(--mid);
+    text-align: center;
+    padding: 48px 40px;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  .doc-footer strong {
+    color: var(--cream);
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════ COVER -->
+<div class="cover">
+  <div class="cover-grid"></div>
+  <div class="cover-noise"></div>
+
+  <div class="cover-label">Brand Identity System — v1.0</div>
+
+  <div class="cover-logo-wrap">
+    <div class="cover-bird">
+      <!-- PRIMARY SVG LOGO MARK -->
+      <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Body: flat geometric bird in flight -->
+        <!-- Wing left -->
+        <polygon points="10,62 42,50 38,72" fill="#C94A2B" opacity="0.9"/>
+        <!-- Wing left tip -->
+        <polygon points="10,62 38,72 28,80" fill="#C94A2B" opacity="0.6"/>
+        <!-- Wing right -->
+        <polygon points="110,58 78,50 82,70" fill="#F5F1EA" opacity="0.9"/>
+        <!-- Wing right tip -->
+        <polygon points="110,58 82,70 94,76" fill="#F5F1EA" opacity="0.55"/>
+        <!-- Body center -->
+        <polygon points="42,50 78,50 82,70 38,72" fill="#F5F1EA"/>
+        <!-- Head -->
+        <polygon points="78,50 96,44 90,58 82,55" fill="#F5F1EA"/>
+        <!-- Beak -->
+        <polygon points="96,44 108,40 100,50" fill="#D4A843"/>
+        <!-- Eye -->
+        <circle cx="87" cy="49" r="2.5" fill="#0F0E0C"/>
+        <!-- Tail -->
+        <polygon points="38,72 42,50 28,58" fill="#F5F1EA" opacity="0.7"/>
+        <polygon points="28,58 38,72 22,78" fill="#F5F1EA" opacity="0.4"/>
+        <!-- Subtle speed lines -->
+        <line x1="18" y1="38" x2="36" y2="38" stroke="#D4A843" stroke-width="1.5" opacity="0.5" stroke-linecap="round"/>
+        <line x1="10" y1="44" x2="28" y2="44" stroke="#D4A843" stroke-width="1" opacity="0.35" stroke-linecap="round"/>
+      </svg>
+    </div>
+
+    <div>
+      <div class="cover-wordmark">Flat<span>bird</span> Labs</div>
+      <div class="cover-sub">Marketing Transformation</div>
+    </div>
+  </div>
+
+  <div class="cover-tagline">Enterprise marketing intelligence, built for the companies that are ready to fly.</div>
+
+  <div class="cover-footer">
+    <span>Philadelphia</span>
+    <span>Washington DC</span>
+    <span>Austin</span>
+    <span>St. Louis</span>
+    <span>Amsterdam</span>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════ LOGO SYSTEM -->
+<div class="section">
+  <div class="section-label">01 — Logomark</div>
+  <div class="section-title">The Flatbird Mark</div>
+
+  <div class="logo-grid">
+    <div class="logo-tile dark">
+      <svg width="64" height="64" viewBox="0 0 120 120" fill="none">
+        <polygon points="10,62 42,50 38,72" fill="#C94A2B" opacity="0.9"/>
+        <polygon points="10,62 38,72 28,80" fill="#C94A2B" opacity="0.6"/>
+        <polygon points="110,58 78,50 82,70" fill="#F5F1EA" opacity="0.9"/>
+        <polygon points="110,58 82,70 94,76" fill="#F5F1EA" opacity="0.55"/>
+        <polygon points="42,50 78,50 82,70 38,72" fill="#F5F1EA"/>
+        <polygon points="78,50 96,44 90,58 82,55" fill="#F5F1EA"/>
+        <polygon points="96,44 108,40 100,50" fill="#D4A843"/>
+        <circle cx="87" cy="49" r="2.5" fill="#0F0E0C"/>
+        <polygon points="38,72 42,50 28,58" fill="#F5F1EA" opacity="0.7"/>
+        <polygon points="28,58 38,72 22,78" fill="#F5F1EA" opacity="0.4"/>
+      </svg>
+      <div class="wordmark-dark">Flat<span>bird</span> Labs</div>
+      <div class="logo-tile-label">Primary — Dark</div>
+    </div>
+
+    <div class="logo-tile cream">
+      <svg width="64" height="64" viewBox="0 0 120 120" fill="none">
+        <polygon points="10,62 42,50 38,72" fill="#C94A2B" opacity="0.9"/>
+        <polygon points="10,62 38,72 28,80" fill="#C94A2B" opacity="0.6"/>
+        <polygon points="110,58 78,50 82,70" fill="#0F0E0C" opacity="0.85"/>
+        <polygon points="110,58 82,70 94,76" fill="#0F0E0C" opacity="0.5"/>
+        <polygon points="42,50 78,50 82,70 38,72" fill="#0F0E0C"/>
+        <polygon points="78,50 96,44 90,58 82,55" fill="#0F0E0C"/>
+        <polygon points="96,44 108,40 100,50" fill="#D4A843"/>
+        <circle cx="87" cy="49" r="2.5" fill="#F5F1EA"/>
+        <polygon points="38,72 42,50 28,58" fill="#0F0E0C" opacity="0.6"/>
+        <polygon points="28,58 38,72 22,78" fill="#0F0E0C" opacity="0.35"/>
+      </svg>
+      <div class="wordmark-cream">Flat<span>bird</span> Labs</div>
+      <div class="logo-tile-label">Light Background</div>
+    </div>
+
+    <div class="logo-tile rust">
+      <svg width="64" height="64" viewBox="0 0 120 120" fill="none">
+        <polygon points="10,62 42,50 38,72" fill="#0F0E0C" opacity="0.5"/>
+        <polygon points="10,62 38,72 28,80" fill="#0F0E0C" opacity="0.3"/>
+        <polygon points="110,58 78,50 82,70" fill="#F5F1EA" opacity="0.9"/>
+        <polygon points="110,58 82,70 94,76" fill="#F5F1EA" opacity="0.55"/>
+        <polygon points="42,50 78,50 82,70 38,72" fill="#F5F1EA"/>
+        <polygon points="78,50 96,44 90,58 82,55" fill="#F5F1EA"/>
+        <polygon points="96,44 108,40 100,50" fill="#D4A843"/>
+        <circle cx="87" cy="49" r="2.5" fill="#C94A2B"/>
+        <polygon points="38,72 42,50 28,58" fill="#F5F1EA" opacity="0.6"/>
+      </svg>
+      <div class="wordmark-rust">Flat<span>bird</span> Labs</div>
+      <div class="logo-tile-label">Brand Colour</div>
+    </div>
+
+    <div class="logo-tile sky">
+      <svg width="64" height="64" viewBox="0 0 120 120" fill="none">
+        <polygon points="10,62 42,50 38,72" fill="#D4A843" opacity="0.9"/>
+        <polygon points="10,62 38,72 28,80" fill="#D4A843" opacity="0.5"/>
+        <polygon points="110,58 78,50 82,70" fill="#F5F1EA" opacity="0.9"/>
+        <polygon points="110,58 82,70 94,76" fill="#F5F1EA" opacity="0.55"/>
+        <polygon points="42,50 78,50 82,70 38,72" fill="#F5F1EA"/>
+        <polygon points="78,50 96,44 90,58 82,55" fill="#F5F1EA"/>
+        <polygon points="96,44 108,40 100,50" fill="#D4A843"/>
+        <circle cx="87" cy="49" r="2.5" fill="#2B7FC9"/>
+        <polygon points="38,72 42,50 28,58" fill="#F5F1EA" opacity="0.6"/>
+      </svg>
+      <div class="wordmark-sky">Flat<span>bird</span> Labs</div>
+      <div class="logo-tile-label">Sky Variant</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════ COLORS -->
+<div class="section">
+  <div class="section-label">02 — Colour System</div>
+  <div class="section-title">A Palette Built for Confidence</div>
+
+  <div class="color-row">
+    <div class="swatch">
+      <div class="swatch-block primary"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Midnight Ink</div>
+        <div class="swatch-hex">#0F0E0C</div>
+        <div class="swatch-role">Primary / Backgrounds</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-block secondary"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Flatbird Rust</div>
+        <div class="swatch-hex">#C94A2B</div>
+        <div class="swatch-role">Brand Accent / CTAs</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-block tertiary"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Meridian Blue</div>
+        <div class="swatch-hex">#2B7FC9</div>
+        <div class="swatch-role">Secondary Accent</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-block accent1"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Beak Gold</div>
+        <div class="swatch-hex">#D4A843</div>
+        <div class="swatch-role">Highlight / Detail</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-block accent2"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Latitude Sage</div>
+        <div class="swatch-hex">#4A7C59</div>
+        <div class="swatch-role">Tertiary / Charts</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-block neutral"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Parchment</div>
+        <div class="swatch-hex">#F5F1EA</div>
+        <div class="swatch-role">Background / Type</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════ TYPOGRAPHY -->
+<div class="section">
+  <div class="section-label">03 — Typography</div>
+  <div class="section-title">Three Voices, One System</div>
+
+  <div class="type-specimen">
+    <div class="type-block">
+      <div class="type-tag">Display — Syne 800</div>
+      <div class="t-display">Marketing that moves.</div>
+      <div class="type-meta">Headlines, hero text, section titles. Bold, geometric, authoritative.</div>
+    </div>
+    <div class="type-block">
+      <div class="type-tag">Editorial — DM Serif Display Italic</div>
+      <div class="t-serif">The enterprise playbook, finally within reach.</div>
+      <div class="type-meta">Pull quotes, taglines, case study callouts. Warm and human.</div>
+    </div>
+    <div class="type-block">
+      <div class="type-tag">Body — DM Mono 400</div>
+      <div class="t-mono-lg">Built for the mid-market.</div>
+      <div class="t-mono-sm" style="margin-top:12px">We bring Fortune 500 marketing infrastructure — the programs, processes, and speed — to companies that are ready to compete at a higher level. Data-backed. AI-enabled. Human-led.</div>
+      <div class="type-meta">Body copy, captions, UI text. Precise and technical, but readable.</div>
+    </div>
+    <div class="type-block">
+      <div class="type-tag">Label — DM Mono 500, uppercase, tracked</div>
+      <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.25em;text-transform:uppercase;color:var(--rust);margin-bottom:8px">Philadelphia · DC · Austin · St. Louis · Amsterdam</div>
+      <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--mid)">01 — Strategy &nbsp;&nbsp; 02 — Execution &nbsp;&nbsp; 03 — Scale</div>
+      <div class="type-meta">Navigation, metadata, tags, UI labels. Clean and systematic.</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════ BRAND VOICE -->
+<div class="section">
+  <div class="section-label">04 — Brand Voice</div>
+  <div class="section-title">How Flatbird Speaks</div>
+
+  <div class="voice-grid">
+    <div class="voice-card">
+      <div class="voice-word">Confident</div>
+      <div class="voice-desc">We've done this at the highest level. We speak from earned experience, not theory. Direct, declarative, no hedging.</div>
+      <div class="not-this">↳ Not: arrogant or jargon-heavy</div>
+    </div>
+    <div class="voice-card">
+      <div class="voice-word">Warm</div>
+      <div class="voice-desc">Three friends who've built real things. We treat clients as partners, not accounts. Approachable without being casual.</div>
+      <div class="not-this">↳ Not: corporate or distant</div>
+    </div>
+    <div class="voice-card">
+      <div class="voice-word">Curious</div>
+      <div class="voice-desc">We love the problem. AI tools, new markets, unexpected pivots — we lean in. Intellectual energy shows in everything we write.</div>
+      <div class="not-this">↳ Not: buzzword-chasing</div>
+    </div>
+    <div class="voice-card">
+      <div class="voice-word">Precise</div>
+      <div class="voice-desc">No fluff. Every word earns its place. We write the way a good brief reads: specific, clear, and actionable.</div>
+      <div class="not-this">↳ Not: vague or over-qualified</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════ TAGLINES -->
+<div class="section">
+  <div class="section-label">05 — Tagline Options</div>
+  <div class="section-title">Finding the Line</div>
+
+  <div class="tagline-list">
+    <div class="tagline-item">
+      <div class="tagline-num">01</div>
+      <div class="tagline-text">Enterprise marketing. Mid-market speed.</div>
+      <div class="tagline-note">Direct value proposition — best for pitch decks and sales contexts</div>
+    </div>
+    <div class="tagline-item">
+      <div class="tagline-num">02</div>
+      <div class="tagline-text">The playbook they kept to themselves.</div>
+      <div class="tagline-note">Provocative and memorable — best for advertising and brand awareness</div>
+    </div>
+    <div class="tagline-item">
+      <div class="tagline-num">03</div>
+      <div class="tagline-text">Built for companies ready to fly.</div>
+      <div class="tagline-note">Warm and aspirational — best for website hero and onboarding</div>
+    </div>
+    <div class="tagline-item">
+      <div class="tagline-num">04</div>
+      <div class="tagline-text">Where Fortune 500 thinking meets your market.</div>
+      <div class="tagline-note">Explicit and credibility-building — best for cold outreach</div>
+    </div>
+    <div class="tagline-item">
+      <div class="tagline-num">05</div>
+      <div class="tagline-text">Five cities. One direction. Your growth.</div>
+      <div class="tagline-note">Story-rich — best for About page and partnership contexts</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════ CREATIVE BRIEF -->
+<div class="section">
+  <div class="section-label">06 — Designer Creative Brief</div>
+  <div class="section-title">For Designers & AI Image Tools</div>
+
+  <div class="brief-grid">
+    <div class="brief-block">
+      <div class="brief-heading">The Company</div>
+      <div class="brief-body">Flatbird Labs is a marketing transformation consultancy founded by three senior marketing leaders with Fortune 500 pedigree. They serve mid-market companies ($20M–$500M ARR) across industries, helping them access enterprise-grade marketing programs, AI-backed processes, and speed-to-market capabilities they couldn't build alone. The three founders are based in Philadelphia, Washington DC, and Amsterdam — with extended team presence in Austin and St. Louis.</div>
+    </div>
+
+    <div class="brief-block">
+      <div class="brief-heading">Brand Personality</div>
+      <div class="brief-body">
+        <ul>
+          <li>Confident without arrogance — experienced operators, not consultants</li>
+          <li>Warm and collegial — three friends, not a faceless firm</li>
+          <li>Modern and data-savvy — AI tools are part of the offering</li>
+          <li>Transatlantic in character — European design sensibility meets American energy</li>
+          <li>Playfully serious — "Flatbird" is whimsical; the work is rigorous</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="brief-block">
+      <div class="brief-heading">Logo Direction</div>
+      <div class="brief-body">
+        <ul>
+          <li>A geometric, flat-style bird in flight — minimal polygons, no gradients</li>
+          <li>The bird should feel aerodynamic and purposeful, not cute or cartoonish</li>
+          <li>Optional: the bird form subtly suggests an upward arrow or forward momentum</li>
+          <li>Paired with wordmark: <strong>Syne ExtraBold</strong> — "Flatbird" in cream/dark, "Labs" slightly lighter or in accent</li>
+          <li>Works at small sizes (favicon, email signature) and large (signage, decks)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="brief-block">
+      <div class="brief-heading">Visual Style</div>
+      <div class="brief-body">
+        <ul>
+          <li>Flat geometric illustration — Low-poly, Bauhaus-influenced</li>
+          <li>Dark backgrounds preferred for hero/brand contexts</li>
+          <li>Rust red as the primary brand accent (not orange, not tomato)</li>
+          <li>Gold used sparingly as a premium highlight detail</li>
+          <li>Grid-based, structured layouts with generous negative space</li>
+          <li>Photography style: candid, real work environments — not stock smiles</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="brief-block full">
+      <div class="brief-heading">Midjourney / DALL·E Prompt (Logo Concept)</div>
+      <div class="brief-body">
+        <em style="color:var(--ink);font-family:'DM Serif Display',serif;font-size:15px;line-height:1.8;">
+          "Flat geometric bird in flight, minimal polygon art, Bauhaus style, dark charcoal background, rust red and cream color palette, gold beak detail, bold angular wings, forward momentum, clean vector aesthetic, no gradients, no texture, brand logo mark, isolated on dark background, professional, modern"
+        </em>
+      </div>
+    </div>
+
+    <div class="brief-block full">
+      <div class="brief-heading">What to Avoid</div>
+      <div class="brief-body">
+        <ul style="columns:2;gap:32px">
+          <li>Gradients or drop shadows on the logo mark</li>
+          <li>Cute or cartoonish bird treatments</li>
+          <li>Purple or teal color schemes</li>
+          <li>Generic sans-serif wordmarks (Inter, Helvetica, Roboto)</li>
+          <li>Consulting clichés: handshakes, gear icons, upward bar charts</li>
+          <li>Overly complex mark that doesn't scale down</li>
+          <li>Literal AI imagery (robot heads, circuits as primary elements)</li>
+          <li>Anything that reads as "startup" rather than "seasoned firm"</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════ FOOTER -->
+<div class="doc-footer">
+  <strong>Flatbird Labs</strong> — Brand Identity System v1.0<br><br>
+  Philadelphia &nbsp;·&nbsp; Washington DC &nbsp;·&nbsp; Austin &nbsp;·&nbsp; St. Louis &nbsp;·&nbsp; Amsterdam
+</div>
+
+</body>
+</html>
