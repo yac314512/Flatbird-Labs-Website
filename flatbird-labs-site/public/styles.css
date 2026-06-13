@@ -585,14 +585,13 @@ p {
   box-shadow: var(--shadow-soft);
 }
 
-.team-photo-placeholder {
+.team-photo {
   width: 100%;
   aspect-ratio: 4 / 5;
   border-radius: 0.95rem;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(0, 0, 0, 0.06)),
-    linear-gradient(135deg, #d8c8ad, #b39a73);
-  border: 1px solid rgba(26, 34, 48, 0.06);
+  object-fit: cover;
+  object-position: center top;
+  display: block;
 }
 
 .team-card h3 {
