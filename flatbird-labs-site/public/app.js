@@ -1,6 +1,37 @@
 const form = document.getElementById("lead-form");
 const statusNode = document.getElementById("form-status");
 const yearNode = document.getElementById("year");
+const navToggle = document.querySelector(".nav-toggle");
+const navLinks = document.getElementById("site-nav-links");
+
+if (navToggle && navLinks) {
+  const closeNav = () => {
+    navLinks.classList.remove("is-open");
+    navToggle.setAttribute("aria-expanded", "false");
+  };
+
+  navToggle.addEventListener("click", () => {
+    const isOpen = navLinks.classList.toggle("is-open");
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  navLinks.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", closeNav);
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!navLinks.classList.contains("is-open")) return;
+    if (navLinks.contains(event.target) || navToggle.contains(event.target)) return;
+    closeNav();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && navLinks.classList.contains("is-open")) {
+      closeNav();
+      navToggle.focus();
+    }
+  });
+}
 
 if (yearNode) {
   yearNode.textContent = new Date().getFullYear();

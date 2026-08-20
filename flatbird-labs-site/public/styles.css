@@ -163,6 +163,35 @@ p {
   border-color: var(--ink);
 }
 
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: 1px solid var(--rule-strong);
+  border-radius: 0.6rem;
+  background: transparent;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.nav-toggle-bar {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--ink);
+  border-radius: 2px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(2) { opacity: 0; }
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
 /* ---------- Buttons ---------- */
 .btn {
   display: inline-flex;
@@ -568,10 +597,10 @@ p {
 /* ---------- Team ---------- */
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.4rem;
   margin-top: 1rem;
-  max-width: 780px;
+  max-width: 1080px;
 }
 
 .team-card {
@@ -995,6 +1024,9 @@ p {
   font-weight: 700;
 }
 
+/* ---------- Utilities ---------- */
+.nowrap-desktop { white-space: nowrap; }
+
 /* ============================================================
    Responsive
    ============================================================ */
@@ -1017,6 +1049,9 @@ p {
     border-right: 0;
     padding-right: 0;
   }
+  .team-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   .connect-layout {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -1024,8 +1059,46 @@ p {
 }
 
 @media (max-width: 880px) {
-  .nav { flex-wrap: wrap; }
-  .nav-links { gap: 1rem 1.2rem; justify-content: flex-start; }
+  .nav-toggle { display: inline-flex; }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    background: var(--cream);
+    border-bottom: 1px solid var(--rule);
+    box-shadow: var(--shadow-mid);
+    padding: 0 6vw;
+    transition: max-height 0.25s ease, opacity 0.2s ease, padding 0.25s ease;
+  }
+  .nav-links.is-open {
+    max-height: 420px;
+    opacity: 1;
+    pointer-events: auto;
+    padding: 0.5rem 6vw 1.5rem;
+  }
+  .nav-links a {
+    width: 100%;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid var(--rule);
+    font-size: 1rem;
+  }
+  .nav-links a:last-of-type { border-bottom: 0; }
+  .nav-links .btn-nav {
+    margin-top: 0.9rem;
+    text-align: center;
+    border-radius: 999px;
+  }
+
+  .nowrap-desktop { white-space: normal; }
 
   .hero { padding: 3.6rem 0 3rem; }
   .section { padding: 4rem 0; }
