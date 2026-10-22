@@ -6,7 +6,7 @@ const nodemailer = require("nodemailer");
 
 const PORT = process.env.PORT || 3000;
 const PUBLIC_DIR = path.join(__dirname, "public");
-const DATA_DIR = path.join(__dirname, "data");
+const DATA_DIR = process.env.DATA_DIR || path.join(__dirname, "data");
 const LEADS_FILE = path.join(DATA_DIR, "leads.jsonl");
 
 const SMTP_HOST = (process.env.SMTP_HOST || "").trim();
