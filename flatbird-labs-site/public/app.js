@@ -90,6 +90,38 @@ document.addEventListener("click", (event) => {
   }
 });
 
+// Team bios: even out line lengths so no bio ends on a stray word or two.
+// Each paragraph is narrowed to the tightest width that keeps its line count.
+function balanceBios() {
+  document.querySelectorAll(".team-bio").forEach((bio) => {
+    bio.style.maxWidth = "";
+    const full = bio.clientWidth;
+    const height = bio.offsetHeight;
+    let lo = Math.floor(full * 0.6);
+    let hi = full;
+    while (hi - lo > 1) {
+      const mid = Math.floor((lo + hi) / 2);
+      bio.style.maxWidth = `${mid}px`;
+      if (bio.offsetHeight > height) {
+        lo = mid;
+      } else {
+        hi = mid;
+      }
+    }
+    bio.style.maxWidth = `${hi}px`;
+  });
+}
+
+if (document.querySelector(".team-bio")) {
+  const fontsReady = document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve();
+  fontsReady.then(balanceBios);
+  let balanceTimer;
+  window.addEventListener("resize", () => {
+    clearTimeout(balanceTimer);
+    balanceTimer = setTimeout(balanceBios, 150);
+  });
+}
+
 function setStatus(message, type) {
   if (!statusNode) return;
   statusNode.textContent = message;

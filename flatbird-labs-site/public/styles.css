@@ -608,17 +608,19 @@ p {
 /* ---------- Team ---------- */
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.4rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.1rem;
   margin-top: 1rem;
-  max-width: 1080px;
 }
 
+/* Each card spans four shared rows (photo, name, title, bio) so those rows line up across cards. */
 .team-card {
   display: grid;
+  grid-row: span 4;
+  grid-template-rows: subgrid;
   align-content: start;
   gap: 0.7rem;
-  padding: 1.4rem 1.4rem 1.6rem;
+  padding: 1.15rem 1.15rem 1.4rem;
   border: 1px solid var(--rule);
   border-radius: 1.1rem;
   background: var(--paper);
@@ -632,6 +634,9 @@ p {
   object-fit: cover;
   object-position: center top;
   display: block;
+  /* Hairline edge so a headshot on a white backdrop still reads as a framed photo. */
+  outline: 1px solid var(--rule);
+  outline-offset: -1px;
 }
 
 .team-card h3 {
@@ -654,6 +659,11 @@ p {
   font-size: 0.97rem;
   line-height: 1.62;
 }
+
+/* Bio endings: the last four words stay together, and app.js evens out the line lengths,
+   so no bio ends on a stray word or two. align-self lets the script measure each bio's own height. */
+.team-bio { align-self: start; }
+.team-bio .bio-tail { white-space: nowrap; }
 
 .team-closing {
   display: flex;
@@ -1110,8 +1120,7 @@ p {
   .hero { padding: 3.6rem 0 3rem; }
   .section { padding: 4rem 0; }
 
-  .advisory-grid,
-  .team-grid {
+  .advisory-grid {
     grid-template-columns: 1fr;
   }
   .team-grid { gap: 1.2rem; }
@@ -1132,6 +1141,7 @@ p {
     grid-template-columns: 1fr;
   }
   .advisory-pillars { grid-template-columns: 1fr; }
+  .team-grid { grid-template-columns: 1fr; }
   .hero-cta-row .btn { width: 100%; }
   .opteros-cta-row { flex-direction: column; align-items: flex-start; }
   .shift-panel { padding: 1.6rem 1.5rem; }
